@@ -16,10 +16,12 @@ Including another URLconf
 from django.conf.urls import include
 from django.contrib import admin
 from django.urls import path
+from rest_framework_jwt.views import obtain_jwt_token
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('ridge_ramble.urls')),
     path('api-auth', include('rest_framework.urls', namespace='rest_framework')),
-    
+    path('token-auth/', obtain_jwt_token),
+    path('user/', include('user.urls'))
 ]

@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 CORS_ORIGIN_ALLOW_ALL = True
+JWT_AUTH = {
+    'JWT_RESPONSE_PAYLOAD_HANDLER': 'ridge_ramble_django.utils.my_jwt_response_handler'
+}
 
 # Application definition
 
@@ -40,6 +43,7 @@ INSTALLED_APPS = [
     'ridge_ramble',
     'rest_framework',
     'corsheaders',
+    'user.apps.UserConfig'
 ]
 
 MIDDLEWARE = [
@@ -54,6 +58,21 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ),
+}
+
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:3000',
+)
 
 ROOT_URLCONF = 'ridge_ramble_django.urls'
 
