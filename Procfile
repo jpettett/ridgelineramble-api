@@ -1,0 +1,1 @@
+web: gunicorn ridge_ramble.wsgi —-log-file -
