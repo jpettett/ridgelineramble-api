@@ -12,6 +12,7 @@ Django = "*"
 dj-database-url = "*"
 djangorestframework = "*"
 django-cors-headers = "*"
+whitenoise = "*"
 
 [requires]
 python_version = "3.8"
