@@ -1,1 +1,1 @@
-web: gunicorn ridge_ramble.wsgi —-log-file -
+web: gunicorn ridge_ramble_django.wsgi —-log-file -
