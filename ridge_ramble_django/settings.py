@@ -27,7 +27,7 @@ SECRET_KEY = 'u8_ork)k^_-o@s*94l1(o968jucr&f$$6dhjrcndkp)1h%(mn^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'https://young-spire-13129.herokuapp.com/']
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'young-spire-13129.herokuapp.com']
 CORS_ORIGIN_ALLOW_ALL = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
