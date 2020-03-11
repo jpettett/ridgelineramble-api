@@ -11,6 +11,7 @@ gunicorn = "*"
 Django = "*"
 dj-database-url = "*"
 djangorestframework = "*"
+django-cors-headers = "*"
 
 [requires]
 python_version = "3.8"
