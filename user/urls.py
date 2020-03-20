@@ -1,5 +1,6 @@
 from django.urls import path
 from .views import current_user, UserList
+from rest_framework.routers import DefaultRouter
 
 
 urlpatterns = [
